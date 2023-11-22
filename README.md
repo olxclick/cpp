@@ -25,7 +25,7 @@ To run or experiment with the code in this repository, follow these steps:
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/olxclick/cppModules
+    git clone https://github.com/olxclick/cpp
     ```
 
 2. **Navigate to the Project Directory:**
