@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 16:48:37 by jbranco-          #+#    #+#             */
-/*   Updated: 2023/11/24 11:07:19 by jbranco-         ###   ########.fr       */
+/*   Created: 2023/11/22 16:48:45 by jbranco-          #+#    #+#             */
+/*   Updated: 2023/11/24 14:00:42 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FIXED_H
+#define FIXED_H
 
-int	main()
+#include <iostream>
+#include <cmath>
+
+class Fixed
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	Fixed d;
 
-	d = a;
-	c = b;
+private:
+	int value;
+	static const int bits;
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-}
+public:
+	Fixed();
+	Fixed(Fixed& obj);
+	Fixed(const int num);
+	Fixed(const float num);
+	float toFloat() const;
+	int toInt()const;
+	Fixed& operator=(const Fixed& other);
+	int	getRawBits() const;
+	void	setRawBits(int const raw);
+	~Fixed();
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:48:45 by jbranco-          #+#    #+#             */
-/*   Updated: 2023/11/22 17:01:14 by jbranco-         ###   ########.fr       */
+/*   Updated: 2023/11/24 11:05:32 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	Fixed();
 	~Fixed();
 	Fixed(Fixed& obj);
+	Fixed& operator=(const Fixed& other);
 	int	getRawBits() const;
 	void	setRawBits(int const raw);
 };

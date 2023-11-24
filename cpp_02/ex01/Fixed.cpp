@@ -6,7 +6,7 @@
 /*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:48:53 by jbranco-          #+#    #+#             */
-/*   Updated: 2023/11/24 13:28:32 by jbranco-         ###   ########.fr       */
+/*   Updated: 2023/11/24 14:54:00 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,29 @@ Fixed::Fixed(Fixed& obj)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
+}
+
+Fixed::Fixed(const int num)
+{
+	std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float num)
+{
+	std::cout << "Float constructor called" << std::endl;
+}
+
+float Fixed::toFloat() const 
+{
+	
+}
+
+int Fixed::toInt()const
+{
+	int	res = 0;
+
+	res = roundf(this->bits);
+	return (res);
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
