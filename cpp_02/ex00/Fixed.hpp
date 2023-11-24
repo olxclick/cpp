@@ -6,7 +6,7 @@
 /*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:48:45 by jbranco-          #+#    #+#             */
-/*   Updated: 2023/11/24 11:05:32 by jbranco-         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:56:51 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 
 private:
 	int value;
-	static const int bits;
+	static const int bits = 8;
 
 public:
 	Fixed();
